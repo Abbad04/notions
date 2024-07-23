@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbad Shazly's Poems</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+        body {
+            font-family: "Noto Naskh Arabic", serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding-top: 100px; /* Add padding to the top to avoid content being hidden under the fixed header */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; /* This makes the header fixed */
+            width: 100%; /* Ensures the header takes the full width of the viewport */
+            top: 0; /* Positions the header at the top of the page */
+            z-index: 1000; /* Ensures the header stays on top of other content */
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+        header li {
+            float: left;
+            padding: 0 20px;
+        }
+        header #branding h1 {
+            position: absolute;
+            left: 85%;
+            top: 40px;
+            margin: 0;
+        }
+        .poem {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .poem h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .poem .date {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .poem p {
+            text-align: center;
+            font-size: 24px;
+            color: #555;
+            direction: rtl;
+        }
+        .poem p span {
+            display: inline-block;
+            width: 45%;
+        }
+        .poem p span.left {
+            margin-left: 20%;
+            width: auto;
+            text-align: left;
+            float: left;
+        }
+        .poem p span.right {
+            margin-right: 20%;
+            width: auto;
+            text-align: right;
+            float: right;
+        }
+        .poem img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .contact {
+            width: 75%;
+            display: flex;
+            margin: auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 100px;
+        }
+
+        .contact a {
+            text-decoration: none;
+            font-family: "Nunito", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: green;
+        }
+
+        .contact i {
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .fab img {
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="scrollToTop()">المدونة</a></li>
+                    <li><a href="https://abbad04.github.io/MyPortofolio/" target="_blank">الملف الشخصي</a></li>
+                    <li><a href="#" onclick="scrollToContact()">تواصل</a></li>
+                </ul>
+            </nav>
+            <div id="branding">
+                <h1>خواطر</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="poem">
+            <h2>حُبٌ صَامِت</h2>
+            <div class="date">نشر: 28 ديسمبر 2022</div>
+            <p>
+                <span class="right">فِي قَلْبِ الطُّفُولَةِ زُرِعَ هَوَاكِ</span><span class="left">وَفِي بُسْتَانِ الرُّوحِ تَفَتَّحَتْ عَيْنَاكِ</span><br><br>
+                <span class="right">يَا أَجْمَلَ مَنْ رَأَيْتُ أَحْبَبْتُ حُبَّكَ</span><span class="left">وَلَمْ ابُحْ بِحُبِّي خَشْيَةَ حَبْكَةِ رَدَيكِ</span><br><br>
+                <span class="right">فَإِنْ كَانَ حُبًّا مُمَاثِلًا خِفْتُ التَّقْصِيرَ</span><span class="left">تَوَانِي يُرَجِّحُ أَنْ قَدْ ظَلَمْنَاكِ</span><br><br>
+                <span class="right">وَانَ كَانَ الْجَوَابُ اسَفًا فَاهْلًا</span><span class="left">بِاطِّفَاءِ نَارٍ كَانَتْ لِي دَافِعٌ لِلِاجْتِهَادِ</span><br><br>
+                <span class="right">فَلَزَمْتُ صَمْتًا مُؤَقَّتًا</span><span class="left">وَلَوْ عَلِمْتُ أَنَّ الْوَقْتَ لَنْ يَحِينَ لَمَا كَبَتُ فُؤَادِي</span><br><br>
+                <span class="right">هَا قَدْ جَاءَ يَوْمُ التَّخَرُّجِ</span><span class="left">ارَاكِ تُغَادِرِينَ، وَالْأَمَلُ يَتَلَاشَى كَالْحُلْمِ</span><br><br>
+                <span class="right">تَرَكْتِنِي بَيْنَ الْجُمُوعِ وَحِيدًا</span><span class="left">وَلَمْ تَعْرِفِينِي سِوَى بِاسْمٍ كبَقِيَّةِ الْأَسْمَاءِ</span><br><br>
+                <span class="right">أَصْبَحتِ ذِكْرَى تَتَوَهَّجُ فِي الْقَلْبِ</span><span class="left">لِحُبٍّ صَامِتٍ قد كُتِبَ لَهُ الفَنَاءُ</span><br><br>
+            </p>
+        </div>
+        <div class="poem">
+            <h2>آلَامُ اَلْأَوْطَانِ</h2>
+            <div class="date">نشر: 12 مارس 2023</div>
+            <p>
+                أَيْقَنْتُ انْ الْعَدُوَّ مُتَهَاوٍ, لَمْ يُغَيِّرْ نِيَّةً وَلَا مَدَارَ<br><br>
+                كَأَنَّ الَّذِي بِفِلَسْطِينَ يَجْرِي, مُرَاةٌ لِأَوْجَاعِ الْعِرَاقِ تَعَارُ<br><br>
+                بَيْنَ جُدْرَانِ أَبِي غَرِيبٍ وَمُسْتَشْفَى الشِّفَاءِ, لَا فَرْقَ يَذْكُرُ غَيْرَ الْأَسْمَاءِ<br><br>
+                أَحْزَانٌ تَتَكَرَّرُ, وَالدُّمُوعُ فِي كُلِّ حِينٍ, تَجْرِي كَنَهْرٍ جَارِفٍ بِلَا إنْتِهَاءٍ<br><br>
+            </p>
+        </div>
+        <div id="contact" class="contact">
+            <div class="socials">
+                <a href="https://www.instagram.com/abbadshazly?igsh=MThqeWd1OGNqbGhvOA%3D%3D&utm_source=qr"><i class="fab fa-instagram"><img src="media/instagram.png" alt=""></i> Instagram</a><br><br>
+                <a href=""><i class="fab fa-spotify"><img src="media/spotify-logo.png" alt=""></i> Spotify</a><br><br>
+                <a href=""><i class="fab fa-envelope"><img src="media/mail.png" alt=""></i> ahs9048@nyu.edu</a>
+                <br><br><br>
+                <p>© 2024 Abbad Shazly</p>
+            </div>
+            <div class="formal">
+                <a href="https://github.com/Abbad04"><i class="fab fa-github"><img src="media/github.png" alt=""></i> Github</a><br><br>
+                <a href=""><i class="fab fa-linkedin"><img src="media/linkedin.png" alt=""></i> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
